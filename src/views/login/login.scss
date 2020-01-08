@@ -1,0 +1,74 @@
+.header {
+  margin-top: 9vh;
+  margin-bottom: 6vh;
+  text-align: center;
+  .description {
+    font-size: 48px;
+    color: #fafafa;
+    margin-top: 1vh;
+  }
+}
+.form {
+  padding-top: 1vh;
+  .input-verify {
+    width: 70%;
+  }
+  .count-verify,
+  .send-verify {
+    width: 100px;
+  }
+}
+#login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+}
+#title {
+  min-width: 580px;
+  font-size: 56px;
+  text-align: center;
+  font-weight: bold;
+}
+#login-form {
+  max-width: 350px;
+  min-width: 250px;
+  margin: 0 auto;
+  width: 25%;
+}
+//第三方登陆，注册div
+#login_reg{
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+}
+#tips {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+i {
+  color: grey;
+}
+.hold-space-div {
+  flex: 1
+}
+#elegant-sentences {
+  padding-top: 25px;
+  margin: 0 auto;
+  max-width: 660px;
+  min-width: 30%;
+}
+#elegant-sentences-content {
+  width: 100%;
+}
+#elegant-sentences-inscribe {
+  margin-top: 15px;
+  width: 100%;
+  text-align: right;
+}

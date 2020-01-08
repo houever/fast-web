@@ -2,7 +2,7 @@ import { getRequest, postRequest } from '../utils/request'
 import { baseUrl,userApi } from '@/config/env'
 //ping 后端
 export function serverAttach() {
-  return getRequest('route/test')
+  return getRequest('')
 }
 
 //登录页背景壁纸

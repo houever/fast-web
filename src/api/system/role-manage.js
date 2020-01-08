@@ -10,7 +10,7 @@ export function getAllRoleList() {
   return getRequest(userApi + '/role/all')
 }
 export function getAllPermissionList() {
-  return getRequest(userApi + '/menus/all')
+  return getRequest(userApi + '/permission/menus')
 }
 
 export function initDepartment() {

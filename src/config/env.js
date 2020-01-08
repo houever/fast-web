@@ -22,8 +22,10 @@ if (env.NODE_ENV === 'development') {
 } else if (env.NODE_ENV === 'test') {
   baseUrl = `http://localhost:8080` // 测试环境地址
 }
-const userApi = 'mycloud-provider-usc';
-const actApi = 'api-act';
+//用户管理服务
+const userApi = 'fast-admin';
+//工作流服务
+const actApi = '';
 const uploadFileAction = "http://10.1.70.39:9008/upload/file"
 export {
   baseUrl,

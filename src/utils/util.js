@@ -14,7 +14,7 @@ export const loadStyle = url => {
  * 设置浏览器头部标题
  */
 export const setTitle = function(title) {
-  title = title ? `${title}` : 'Mycloud-admin'
+  title = title ? `${title}` : 'Fast-cloud'
   window.document.title = title + '-基于springcloud前后端分离'
 }
 

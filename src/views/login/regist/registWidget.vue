@@ -6,7 +6,7 @@
   <div id="login-container">
     <div class="hold-space-div"/>
     <Row class="header">
-      <div class="description">M-cloud 注册</div>
+      <div class="description">Fast-cloud 注册</div>
     </Row>
     <div id="login-form">
       <Form ref="loginForm" :model="loginForm" :rules="loginRules">

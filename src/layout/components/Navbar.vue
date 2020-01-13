@@ -32,7 +32,7 @@
           <router-link to="/">
             <el-dropdown-item>首页</el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://github.com/houever/mycloud-admin">
+          <a target="_blank" href="https://github.com/houever/Fast-cloud">
             <el-dropdown-item>项目地址</el-dropdown-item>
           </a>
           <el-dropdown-item divided>

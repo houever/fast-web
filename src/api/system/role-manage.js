@@ -26,7 +26,7 @@ export function editRole(data) {
 }
 
 export function deleteRole(id) {
-  return deleteRequest(userApi + '/role/del/' + id)
+  return getRequest(userApi + '/roles/delById/' + id)
 }
 
 export function setDefaultRole(data) {

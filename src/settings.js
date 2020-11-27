@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Mycloud Admin',
+  title: 'Fast Admin',
 
   /**
    * @type {boolean} true | false

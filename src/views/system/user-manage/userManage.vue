@@ -514,6 +514,7 @@
         this.userModalVisible = false
         this.$refs.userForm.resetFields()
       },
+      /*添加用户提交*/
       submitUser() {
         this.submitLoading = true
         this.$refs.userForm.validate(valid => {
@@ -537,6 +538,7 @@
                 title: '确认添加',
                 content: '是否确认提交？',
                 onOk: () => {
+                  this.userForm.deptId = ''
                   addUser(this.userForm).then(res => {
                     this.submitLoading = false
                     if (res.success === true) {

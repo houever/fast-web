@@ -16,9 +16,9 @@ const iconfontUrl = `//at.alicdn.com/t/font_$key.css`
 const codeUrl = `${baseUrl}/code`
 const env = process.env
 if (env.NODE_ENV === 'development') {
-  baseUrl = `http://localhost:8443/` // 开发环境地址
+  baseUrl = `http://localhost:8230/` // 开发环境地址
 } else if (env.NODE_ENV === 'production') {
-  baseUrl = `http://192.168.11.16:8080` // 生产环境地址
+  baseUrl = `http://8.140.113.0:8230` // 生产环境地址
 } else if (env.NODE_ENV === 'test') {
   baseUrl = `http://localhost:8080` // 测试环境地址
 }

@@ -31,29 +31,29 @@
         fixStyle: '',
         PATH_TO_MP4: '',
         PATH_TO_WEBM: '',
-        PATH_TO_JPEG: ''
+        PATH_TO_JPEG: require("../../assets/images/bg.jpg")
       }
     },
     methods: {
-      async loginBg(){
-        await getLoginBg().then(res => {
-          put("bgVideo",res.data.bgVideo)
-          put("bgWebm",res.data.bgWebm)
-          put("bgImg",res.data.bgImg)
-        })
-      },
-      init() {
-        this.PATH_TO_MP4 = get("bgVideo")
-        this.PATH_TO_WEBM = get("bgWebm")
-        this.PATH_TO_JPEG = get("bgImg")
-        this.canplay()
-      },
+      // async loginBg(){
+      //   await getLoginBg().then(res => {
+      //     put("bgVideo",res.data.bgVideo)
+      //     put("bgWebm",res.data.bgWebm)
+      //     put("bgImg",res.data.bgImg)
+      //   })
+      // },
+      // init() {
+      //   this.PATH_TO_MP4 = get("bgVideo")
+      //   this.PATH_TO_WEBM = get("bgWebm")
+      //   this.PATH_TO_JPEG = get("bgImg")
+      //   this.canplay()
+      // },
       canplay() {
         this.vedioCanPlay = true
       }
     },
     created: function() {
-      this.loginBg()
+      // this.loginBg()
     },
     mounted: function() {
       window.onresize = () => {
@@ -83,7 +83,7 @@
         }
       }
       window.onresize()
-      this.init()
+      // this.init()
     }
   }
 </script>

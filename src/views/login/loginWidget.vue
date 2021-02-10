@@ -31,16 +31,17 @@
             @keyup.enter.native="handleLogin"/>
         </FormItem>
         <FormItem>
-          <Captcha
-            id="Captcha"
-            scene="Login"
-            type="TencentCaptcha"
-            :parm="captchaOption"
-            @callback="captchaNotice"
-            :url=this.verifyCaptchaUrl
-          >
-            <Button id="Captcha" type="primary" long :loading="loading">登录</Button>
-          </Captcha>
+<!--          <Captcha-->
+<!--            id="Captcha"-->
+<!--            scene="Login"-->
+<!--            type="TencentCaptcha"-->
+<!--            :parm="captchaOption"-->
+<!--            @callback="captchaNotice"-->
+<!--            :url=this.verifyCaptchaUrl-->
+<!--          >-->
+<!--            -->
+<!--          </Captcha>-->
+          <Button id="Captcha" type="primary" long :loading="loading" @click="handleLogin">登录</Button>
         </FormItem>
         <div id="login_reg">
           <span>

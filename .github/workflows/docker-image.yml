@@ -16,7 +16,7 @@ jobs:
           echo 'FROM redis:7.4.1-bookworm' > Dockerfile
           echo 'RUN apt-get update -y' >> Dockerfile
           echo 'RUN apt-get install -y keepalived' >> Dockerfile
-          echo 'RUN vm.overcommit_memory=0 >> /etc/sysctl.conf' >> Dockerfile
+          echo 'RUN vm.overcommit_memory=1 >> /etc/sysctl.conf' >> Dockerfile
           echo 'EXPOSE 6379' >> Dockerfile
           echo 'CMD ["sh", "-c", "redis-server /etc/redis.conf & keepalived -n -D"]' >> Dockerfile
 

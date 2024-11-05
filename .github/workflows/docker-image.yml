@@ -13,7 +13,7 @@ jobs:
     steps:      
       - name: Create Dockerfile
         run: |
-          echo 'FROM redis:7.4.6-bookworm' > Dockerfile
+          echo 'FROM redis:7.4.2-bookworm' > Dockerfile
           echo 'RUN apt-get update -y' >> Dockerfile
           echo 'RUN apt-get install -y keepalived' >> Dockerfile
           echo 'RUN echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf' >> Dockerfile

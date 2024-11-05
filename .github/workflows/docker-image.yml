@@ -1,0 +1,47 @@
+name: Build and Package Docker Image
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:      
+      - name: Create Dockerfile
+        run: |
+          echo 'FROM redis:7.4.1-bookworm' > Dockerfile
+          echo 'RUN apt-get update -y' >> Dockerfile
+          echo 'RUN apt-get install -y keepalived' >> Dockerfile
+          echo 'EXPOSE 6379' >> Dockerfile
+          echo 'CMD ["sh", "-c", "redis-server & keepalived -n -D"]' >> Dockerfile
+
+
+      - name: Check for Dockerfile
+        run: ls -l
+
+      - name: Set up QEMU for ARM emulation
+        uses: docker/setup-qemu-action@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image for ARM
+        run: |
+          docker buildx build --platform linux/arm64 \
+            -t redis-keepalived/redis-keepalived:latest \
+            --load \
+            .
+
+      - name: Save Docker image as a tar file
+        run: |
+          docker save redis-keepalived/redis-keepalived:latest -o redis-keepalived.tar
+
+      - name: Upload tar file as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: redis-keepalived
+          path: redis-keepalived.tar

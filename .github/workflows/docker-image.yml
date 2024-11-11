@@ -16,6 +16,7 @@ jobs:
           echo 'FROM redis:7.4.0-bookworm' > Dockerfile
           echo 'RUN apt-get update -y' >> Dockerfile
           echo 'RUN apt-get install -y systemd' >> Dockerfile
+          echo 'RUN sysctl vm.overcommit_memory=1' >> Dockerfile
           echo 'RUN apt-get install -y keepalived' >> Dockerfile
           echo 'RUN echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf' >> Dockerfile
           echo 'EXPOSE 6379' >> Dockerfile

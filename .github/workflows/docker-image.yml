@@ -14,7 +14,13 @@ jobs:
       - name: Create Dockerfile
         run: |
           echo 'FROM redis:7.4.0-bookworm' > Dockerfile
+          echo 'ENV TZ=Asia/Shanghai' >> Dockerfile
           echo 'RUN apt-get update -y' >> Dockerfile
+          echo 'RUN apt-get update && \' >> Dockerfile
+          echo 'RUN apt-get install -y tzdata && \' >> Dockerfile
+          echo 'RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \' >> Dockerfile
+          echo 'RUN echo $TZ > /etc/timezone && \' >> Dockerfile
+          echo 'RUN apt-get clean' >> Dockerfile
           echo 'RUN apt-get install -y systemd' >> Dockerfile
           echo 'RUN apt-get install -y keepalived' >> Dockerfile
           echo 'RUN echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf' >> Dockerfile

@@ -18,9 +18,9 @@ jobs:
           echo 'RUN apt-get update -y' >> Dockerfile
           echo 'RUN apt-get update && \' >> Dockerfile
           echo 'RUN apt-get install -y tzdata && \' >> Dockerfile
-          echo 'RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \' >> Dockerfile
-          echo 'RUN echo $TZ > /etc/timezone && \' >> Dockerfile
-          echo 'RUN apt-get clean' >> Dockerfile
+          echo 'ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \' >> Dockerfile
+          echo 'echo $TZ > /etc/timezone && \' >> Dockerfile
+          echo 'apt-get clean' >> Dockerfile
           echo 'RUN apt-get install -y systemd' >> Dockerfile
           echo 'RUN apt-get install -y keepalived' >> Dockerfile
           echo 'RUN echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf' >> Dockerfile

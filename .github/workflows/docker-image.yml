@@ -16,7 +16,6 @@ jobs:
           echo 'FROM redis:7.4.0-bookworm' > Dockerfile
           echo 'ENV TZ=Asia/Shanghai' >> Dockerfile
           echo 'RUN apt-get update -y' >> Dockerfile
-          echo 'RUN apt-get update && \' >> Dockerfile
           echo 'RUN apt-get install -y tzdata && \' >> Dockerfile
           echo 'ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \' >> Dockerfile
           echo 'echo $TZ > /etc/timezone && \' >> Dockerfile

@@ -22,9 +22,6 @@ jobs:
           echo 'apt-get clean' >> Dockerfile
           echo 'RUN apt-get install -y systemd' >> Dockerfile
           echo 'RUN apt-get install -y keepalived' >> Dockerfile
-          echo 'RUN echo 'vm.overcommit_memory=1' >> /etc/sysctl.conf' >> Dockerfile
-          echo 'EXPOSE 6379' >> Dockerfile
-          echo 'CMD ["sh", "-c", "redis-server /etc/redis.conf & keepalived -n -D -f /etc/keepalived/keepalived.conf"]' >> Dockerfile
 
 
       - name: Check for Dockerfile
